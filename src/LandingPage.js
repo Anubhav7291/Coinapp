@@ -36,7 +36,7 @@ function LandingPage() {
                       <th>Change(24hrs)</th>
                   </tr>
                   </thead>
-                  {data?.slice(pageStart,pageEnd)?.map((value)=>{
+                  {data?data?.slice(pageStart,pageEnd)?.map((value)=>{
                       return (
                           <tbody style={{fontWeight:"bold"}}>
                           <tr>
@@ -51,7 +51,7 @@ function LandingPage() {
                           </tr>
                           </tbody>
                       )
-                  })}
+                  }):<h1>Loading...(If not coming in 10 secS you can refresh the page)</h1>}
                   <button className="btn-primary" onClick={(e)=>handlePagination(e)}>Load More</button>
               </table>
        </>
